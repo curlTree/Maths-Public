@@ -1,0 +1,7 @@
+QuestionId is 1 based and is unique
+AnswerChoice objects are 0 based and are unique and many-to-many with Question
+CorrectChoice objects are combinations of Question and AnswerChoice - act as a through table to store correct answer choices for each Question
+TestplanId is not globally unique and is 0 based.They are  unique for a given SectionId. TestPlan is many-to-many with Question through TestPlanQuestion
+which is a combination of a Questions assigned to TestPlans
+TestPlanUserSummary is unique and Id is system generated hence 0 based .It is many-to-many with TestPlan and User
+TestPlanQuestion is many-to-many with User through Tested . Tested has a foreign key to AnswerChoice and captures the answers selected by user for a given question
