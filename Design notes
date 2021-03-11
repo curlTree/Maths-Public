@@ -8,6 +8,10 @@ TestPlanQuestion is many-to-many with User through Tested . Tested has a foreign
 <ul>
 <li>TopDownAllChildren function- sets the lastNodeId to reinitiate all nodes. THis should be done only once since the Ids need to be constant all the time for mappings to work
 <li>delete (not drop) all the table entries and then run post_with_token() manually from front end to populate the tables
+<li> remove and existing testplan notes from the front end
 <li> indent the lastNodeId codes 
+<li>Download and save the json tree .Use this for subsequent iterations.
+<li>Run post with token every time there is a change in nodes/testplans .This is to be done by admin. THis code should not be exposed to user - maybe use groups to prevent 
+the ajax call from people other than admin
 </ul>
 
