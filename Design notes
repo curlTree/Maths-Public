@@ -5,4 +5,4 @@ TestplanId is not globally unique and is 0 based.They are  unique for a given Se
 which is a combination of a Questions assigned to TestPlans
 TestPlanUserSummary is unique and Id is system generated hence 0 based .It is many-to-many with TestPlan and User
 TestPlanQuestion is many-to-many with User through Tested . Tested has a foreign key to AnswerChoice and captures the answers selected by user for a given question
-TopDownAllChildren - set the lastNodeId to reinitiate all nodes
+TopDownAllChildren - set the lastNodeId to reinitiate all nodes. THis should be done only once since the Ids need to be constant all the time for mappings to work
