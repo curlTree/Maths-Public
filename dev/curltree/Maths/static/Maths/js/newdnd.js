@@ -27,7 +27,17 @@ runFunction();
 function getWorking(resp,root)
 {   
  
-if(response=='200'){root=JSON.parse(root);console.log("Tree Ready",root);DATA_PARAMS.root=root;}
+if(response=='200'){
+    // root=JSON.parse(root)
+    if (DATA_PARAMS.localRead){
+        DATA_PARAMS.root=root;
+    }
+    else{
+        root=JSON.parse(root);
+        DATA_PARAMS.root=root;
+        }
+    }
+    
 else{console.log("TThenga");}
 
 gExists=d3.select("g.mainPaneG");
