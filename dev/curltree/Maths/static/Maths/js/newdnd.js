@@ -28,7 +28,7 @@ function getWorking(resp,root)
 {   
  
 if(response=='200'){
-    // root=JSON.parse(root)
+    
     if (DATA_PARAMS.localRead){
         DATA_PARAMS.root=root;
     }
